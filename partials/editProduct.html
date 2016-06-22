@@ -1,0 +1,12 @@
+<h1>Edit {{ prod.Name }}</h1>
+<div>
+	<input type="text" ng-model="prod.Name" placeholder="{{prod.Name}}">
+</div>
+<div>
+	<input type="text" ng-model="prod.Description" placeholder="{{prod.Description}}">
+</div>
+<div>
+	<input type="text" ng-model="prod.UnitPrice" placeholder="{{prod.UnitPrice}}">
+</div>
+
+<button ng-click="saveProduct(prod.ProductId)">Save Changes</button>
