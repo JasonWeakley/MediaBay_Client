@@ -1,0 +1,15 @@
+<h1>Create a New Product</h1>
+<div>
+	<label for="name">Product Name</label>
+	<input type="text" name="name" ng-model="product.name">
+</div>
+<div>
+	<label for="description">Description</label>
+	<input type="text" name="description" ng-model="product.description">
+</div>
+<div>
+	<label for="price">Price</label>
+	<input type="text" name="price" ng-model="product.price">
+</div>
+
+<button ng-click="createProduct()">Submit</button>
