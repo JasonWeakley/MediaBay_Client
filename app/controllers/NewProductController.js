@@ -6,18 +6,17 @@ MediaBay.controller('NewProductController', [
 
 	function ($http, $scope) {
 
-		$scope.product = {
-			name: "",
-			description: "",
-			price: 0.00
-		};
+		$scope.product = [];
 
 		$scope.createProduct = function () {
-
 			$http({
 				url:'http://localhost:5000/api/Product',
 				method:'POST',
-				data: JSON.stringify($scope.product)
+				data: JSON.stringify({
+					name: $scope.product.name,
+					description: $scope.product.description,
+					price: $scope.product.price
+				})
 			})
 			.success(newProduct => console.log("201 Created", newProduct))
 		};
