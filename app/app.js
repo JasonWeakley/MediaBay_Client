@@ -23,6 +23,22 @@ MediaBay.config(['$routeProvider',
 			templateUrl: 'partials/productDetails.html',
 			controller: 'NewProductController'
 		})
+		.when('/series', {
+			templateUrl: 'partials/series.html',
+			controller: 'SeriesController'
+		})
+		.when('/series/add', {
+			templateUrl: 'partials/addSeries.html',
+			controller: 'SeriesController'
+		})
+		.when('/series/edit', {
+			templateUrl: 'partials/editSeries.html',
+			controller: 'SeriesController'
+		})
+		.when('/series/detail', {
+			templateUrl: 'partials/seriesDetail.html',
+			controller: 'SeriesController'
+		})
 		.otherwise('/');
   }
 ]);

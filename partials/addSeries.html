@@ -1,0 +1,14 @@
+<h1>Media Bay</h1>
+<nav ng-include="'partials/nav.html'"></nav>
+<button ng-click="createView(series.SeriesId)">Add Another Series</button>
+<h3>Create a New Series</h3>
+<div>
+	<label for="name">Series Name</label>
+	<input type="text" name="name" ng-model="series.name">
+</div>
+<div>
+	<label for="description">Description</label>
+	<input type="text" name="description" ng-model="series.description">
+</div>
+
+<button ng-click="addSeries()">Submit</button>
