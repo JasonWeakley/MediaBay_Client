@@ -1,0 +1,11 @@
+<h1>Media Bay</h1>
+<nav ng-include="'partials/nav.html'"></nav>
+<h3>Product Details for: {{ grp.Name }}</h3>
+	<ul>  
+		<li><span>Name: </span>{{ grp.Name }}</li>
+		<li><span>Description: </span>{{ grp.Description }}</li>
+		<li><span>Price: </span>{{ grp.UnitPrice }}</li>
+		<li><span>Promo Code: </span>{{ grp.PromoCode }}</li>
+	</ul>
+<button ng-click="editGroup(grp.GroupId)">Edit Group</button>
+<button ng-click="deleteGroup(grp.GroupId)">Delete</button>
