@@ -16,7 +16,12 @@ MediaBay.controller('NewProductController', [
 
 		console.log("NewProductController is working");
 
-		// Create new products
+		// Launch the view to create a new product
+		$scope.createView = function () {
+			$location.path("/product/add")
+		};
+
+		// Create new product
 		$scope.createProduct = function () {
 			console.log("createProduct");
 			$http({
@@ -29,6 +34,9 @@ MediaBay.controller('NewProductController', [
 				})
 			})
 			.success(newProduct => console.log("201 Created", newProduct))
+			.then( function() {
+				$location.path("/product")
+			})
 		};
 
 		// Get product details
@@ -42,7 +50,21 @@ MediaBay.controller('NewProductController', [
 				$scope.$parent.prod = prod;
 			})
 			.then( function() {
-				$location.path("/productdetails")
+				$location.path("/product/detail")
+			})
+		};
+
+		// Get product details
+		$scope.detailView = function (id) {
+			$http({
+				url:`http://localhost:5000/api/Product/${id}`,
+				method:'GET'
+			})
+			.success( function(prod) {
+				$scope.$parent.prod = prod;
+			})
+			.then( function() {
+				$location.path("/product/detail")
 			})
 		};
 
@@ -56,7 +78,7 @@ MediaBay.controller('NewProductController', [
 				$scope.$parent.prod = prod;
 			})
 			.then(function() {
-				$location.path("/editproduct");
+				$location.path("/product/edit");
 			})
 		};
 
@@ -78,7 +100,7 @@ MediaBay.controller('NewProductController', [
 				$scope.$parent.prod = prod;
 			})
 			.then( function() {
-				$location.path("/")
+				$location.path("/product")
 			})
 		};
 
@@ -91,7 +113,7 @@ MediaBay.controller('NewProductController', [
 				$scope.$parent.prod = prod;
 			})
 			.then( function() {
-				$location.path("/")
+				$location.path("/product")
 			})
 		};
 

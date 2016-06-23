@@ -11,15 +11,19 @@ MediaBay.config(['$routeProvider',
 			templateUrl: 'partials/main.html',
 			controller: 'MainController'
 		})
-		.when('/createproduct', {
+		.when('/product', {
+			templateUrl: 'partials/product.html',
+			controller: 'NewProductController'
+		})
+		.when('/product/add', {
 			templateUrl: 'partials/newProduct.html',
 			controller: 'NewProductController'
 		})
-		.when('/editproduct', {
+		.when('/product/edit', {
 			templateUrl: 'partials/editProduct.html',
 			controller: 'NewProductController'
 		})
-		.when('/productdetails', {
+		.when('/product/detail', {
 			templateUrl: 'partials/productDetails.html',
 			controller: 'NewProductController'
 		})
