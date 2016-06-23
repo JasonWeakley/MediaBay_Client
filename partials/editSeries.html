@@ -1,0 +1,11 @@
+<h1>Media Bay</h1>
+<nav ng-include="'partials/nav.html'"></nav>
+<h3>Edit {{ ser.Name }}</h3>
+<div>
+	<input type="text" ng-model="ser.Name" placeholder="{{ser.Name}}">
+</div>
+<div>
+	<input type="text" ng-model="ser.Description" placeholder="{{ser.Description}}">
+</div>
+
+<button ng-click="saveSeries(ser.SeriesId)">Save Changes</button>

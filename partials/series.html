@@ -1,0 +1,8 @@
+<h1>Media Bay</h1>
+<nav ng-include="'partials/nav.html'"></nav>
+<button ng-click="createView(ser.SeriesId)">Add New Series</button>
+<div ng-repeat="series in series">
+	<span ng-click="detailSeries(series.SeriesId)">
+		{{ series.Name }}
+	</span>
+</div>
