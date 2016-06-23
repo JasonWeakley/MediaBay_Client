@@ -14,4 +14,8 @@
 	<input type="text" name="price" ng-model="product.price">
 </div>
 
+<select ng-model="selectedGroup" ng-options="g.GroupId as g.Name for g in groupList">
+    <option value="">Product Groupings</option>
+</select>
+
 <button ng-click="createProduct()">Submit</button>
