@@ -1,9 +1,9 @@
+<nav ng-include="'partials/nav.html'"></nav>
 <h3>Product ID: #{{ prod.ProductId }}</h3>
 	<ul>  
 		<li><span>Name: </span>{{ prod.Name }}</li>
 		<li><span>Description: </span>{{ prod.Description }}</li>
 		<li><span>Price: </span>{{ prod.UnitPrice }}</li>
 	</ul>
-
-	<button ng-click="editProduct(prod.ProductId)">Edit Product</button>
-	<button ng-click="deleteProduct(prod.ProductId)">Delete</button>
+<button ng-click="editProduct(prod.ProductId)">Edit Product</button>
+<button ng-click="deleteProduct(prod.ProductId)">Delete</button>
