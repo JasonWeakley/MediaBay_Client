@@ -1,0 +1,8 @@
+<h1>Media Bay</h1>
+<nav ng-include="'partials/nav.html'"></nav>
+<button ng-click="createView()">Add New Product</button>
+<div ng-repeat="p in product">
+	<span ng-click="detailView(p.ProductId)">
+		{{ p.Name }}
+	</span>
+</div>
