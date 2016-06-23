@@ -8,13 +8,20 @@ MediaBay.controller('NewProductController', [
 	function ($http, $scope, $location) {
 
 		$scope.product = [];
+		$scope.groupList = [];
 
 		// Get products and scope the data equal to the var "prod"
 		$http
 			.get(`http://localhost:5000/api/Product`)
 			.success(prod => $scope.product = prod);
 
-		console.log("NewProductController is working");
+		$http({
+            method: 'GET',
+            url: `http://localhost:5000/api/Group`
+        })
+        .success(function (result) {
+        	$scope.groupList = result;
+	    });
 
 		// Launch the view to create a new product
 		$scope.createView = function () {
