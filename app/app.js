@@ -43,6 +43,22 @@ MediaBay.config(['$routeProvider',
 			templateUrl: 'partials/seriesDetail.html',
 			controller: 'SeriesController'
 		})
+		.when('/groups', {
+			templateUrl: 'partials/groups.html',
+			controller: 'GroupController'
+		})
+		.when('/group/add', {
+			templateUrl: 'partials/addGroup.html',
+			controller: 'GroupController'
+		})
+		.when('/group/edit', {
+			templateUrl: 'partials/editGroup.html',
+			controller: 'GroupController'
+		})
+		.when('/group/detail', {
+			templateUrl: 'partials/groupDetail.html',
+			controller: 'GroupController'
+		})
 		.otherwise('/');
   }
 ]);

@@ -1,0 +1,8 @@
+<h1>Media Bay</h1>
+<nav ng-include="'partials/nav.html'"></nav>
+<button ng-click="createView()">Add New Group</button>
+<div ng-repeat="g in group">
+	<span ng-click="detailGroup(g.GroupId)">
+		{{ g.Name }}
+	</span>
+</div>
