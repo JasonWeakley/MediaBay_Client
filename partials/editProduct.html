@@ -1,14 +1,25 @@
-<h1>Media Bay</h1>
 <nav ng-include="'partials/nav.html'"></nav>
-<h1>Edit {{ prod.Name }}</h1>
-<div>
-	<input type="text" ng-model="prod.Name" placeholder="{{prod.Name}}">
-</div>
-<div>
-	<input type="text" ng-model="prod.Description" placeholder="{{prod.Description}}">
-</div>
-<div>
-	<input type="text" ng-model="prod.UnitPrice" placeholder="{{prod.UnitPrice}}">
-</div>
-
-<button ng-click="saveProduct(prod.ProductId)">Save Changes</button>
+<center>
+	<div style="width:50%" class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">Edit {{ prod.Name }}</h3>
+		</div>
+		<div class="panel-body nav">  
+			<div style="width:100%" class="input-group">
+				<div style="width:25%" class="input-group-addon" id="basic-addon1">Name</div>
+				<input class="form-control" aria-describedby="basic-addon1" type="text" ng-model="prod.Name" placeholder="{{prod.Name}}">
+			</div>
+			<div style="width:100%" class="input-group">
+				<div style="width:25%" class="input-group-addon" id="basic-addon1">Description</div>
+				<input class="form-control" aria-describedby="basic-addon1" type="text" ng-model="prod.Description" placeholder="{{prod.Description}}">
+			</div>
+			<div style="width:100%" class="input-group">
+				<div style="width:25%" class="input-group-addon" id="basic-addon1">Price</div>
+				<input class="form-control" aria-describedby="basic-addon1" type="text" ng-model="prod.UnitPrice" placeholder="{{prod.UnitPrice}}">
+			</div>
+		</div>
+	</div>
+	<div style="width:50%">
+		<button style="width:100%" type="button" class="btn btn-default btn-lg" ng-click="saveProduct(prod.ProductId)">Save Changes</button>
+	</div>
+</center>

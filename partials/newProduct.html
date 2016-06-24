@@ -1,5 +1,4 @@
-<h1>Media Bay</h1>
-<nav ng-include="'partials/nav.html'"></nav>
+<!-- <nav ng-include="'partials/nav.html'"></nav>
 <h1>Create a New Product</h1>
 <div>
 	<label for="name">Product Name</label>
@@ -18,4 +17,39 @@
     <option value="">Product Groupings</option>
 </select>
 
-<button ng-click="createProduct()">Submit</button>
+<button ng-click="createProduct()">Submit</button> -->
+
+
+
+
+<nav ng-include="'partials/nav.html'"></nav>
+<center>
+	<h2>Create a New Product</h2>
+	<div style="width:75%">
+		<div style="width:100%" class="input-group">
+		  <div style="width:25%" for="name" class="input-group-addon" id="basic-addon1">Product Name</div>
+		  <input name="name" ng-model="product.name" type="text" class="form-control" placeholder="Movie" aria-describedby="basic-addon1">
+		</div>
+		<br>
+		<div style="width:100%" class="input-group">
+		  <div style="width:25%" for="description" class="input-group-addon" id="basic-addon1">Description</div>
+		  <input name="description" ng-model="product.description" type="text" class="form-control" placeholder="It is a dark time for the Rebellion." aria-describedby="basic-addon1">
+		</div>
+		<br>
+		<div style="width:100%" class="input-group">
+		  <div style="width:25%" for="price" class="input-group-addon" id="basic-addon1">Price</div>
+		  <input name="price" ng-model="product.price" type="text" class="form-control" placeholder="Luca$" aria-describedby="basic-addon1">
+		</div>
+		<br>
+		<div style="width:100%" class="input-group">
+		  <div style="width:25%" class="input-group-addon" id="basic-addon1">Product Group</div>
+			<select style="width:100%" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-model="selectedGroup" ng-options="g.GroupId as g.Name for g in groupList">
+				<option value="">Select a Group</option>
+			</select>
+		</div>
+		<br>
+		<button style="width:100%" type="button" class="btn btn-default btn-lg" ng-click="createProduct()">
+		  <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span> Submit
+		</button>
+	</div>
+</center>

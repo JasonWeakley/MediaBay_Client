@@ -82,7 +82,7 @@ MediaBay.controller('SeriesController', [
 				$scope.$parent.ser = ser;
 			})
 			.then( function() {
-				$location.path("/series/detail")
+				$location.path("/series")
 			})
 		};
 

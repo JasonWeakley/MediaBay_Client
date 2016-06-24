@@ -7,11 +7,11 @@ let MediaBay = angular.module('MediaBay', [
 MediaBay.config(['$routeProvider', 
   function ($routeProvider) {
 	$routeProvider
+		// .when('/', {
+		// 	templateUrl: 'partials/main.html',
+		// 	controller: 'MainController'
+		// })
 		.when('/', {
-			templateUrl: 'partials/main.html',
-			controller: 'MainController'
-		})
-		.when('/product', {
 			templateUrl: 'partials/product.html',
 			controller: 'NewProductController'
 		})

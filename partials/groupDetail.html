@@ -1,11 +1,17 @@
-<h1>Media Bay</h1>
 <nav ng-include="'partials/nav.html'"></nav>
-<h3>Product Details for: {{ grp.Name }}</h3>
-	<ul>  
-		<li><span>Name: </span>{{ grp.Name }}</li>
-		<li><span>Description: </span>{{ grp.Description }}</li>
-		<li><span>Price: </span>{{ grp.UnitPrice }}</li>
-		<li><span>Promo Code: </span>{{ grp.PromoCode }}</li>
-	</ul>
-<button ng-click="editGroup(grp.GroupId)">Edit Group</button>
-<button ng-click="deleteGroup(grp.GroupId)">Delete</button>
+<center>
+	<div style="width:50%" class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">{{ grp.Name }}</h3>
+		</div>
+		<ul class="panel-body nav">  
+			<li>{{ grp.Description }}</li>
+			<li>{{ grp.UnitPrice }}</li>
+			<li>{{ grp.PromoCode }}</li>
+		</ul>
+	</div>
+	<div style="width:50%">
+		<button style="width:45%" type="button" class="btn btn-default btn-lg" ng-click="editGroup(grp.GroupId)"">Edit Group</button>
+		<button style="width:45%" type="button" class="btn btn-default btn-lg" ng-click="deleteGroup(grp.GroupId)">Delete</button>
+	</div>
+</center>

@@ -1,13 +1,19 @@
-<h1>Media Bay</h1>
 <nav ng-include="'partials/nav.html'"></nav>
-<h3>Create a New Series</h3>
-<div>
-	<label for="name">Series Name</label>
-	<input type="text" name="name" ng-model="series.name">
-</div>
-<div>
-	<label for="description">Description</label>
-	<input type="text" name="description" ng-model="series.description">
-</div>
-
-<button ng-click="addSeries()">Submit</button>
+<center>
+	<h2>Create a New Series</h2>
+	<div style="width:75%">
+		<div style="width:100%" class="input-group">
+		  <div style="width:25%" for="name" class="input-group-addon" id="basic-addon1">Series Name</div>
+		  <input name="name" ng-model="series.name" type="text" class="form-control" placeholder="Movie" aria-describedby="basic-addon1">
+		</div>
+		<br>
+		<div style="width:100%" class="input-group">
+		  <div style="width:25%" for="description" class="input-group-addon" id="basic-addon1">Description</div>
+		  <input name="description" ng-model="series.description" type="text" class="form-control" placeholder="It is a dark time for the Rebellion." aria-describedby="basic-addon1">
+		</div>
+		<br>
+		<button style="width:100%" type="button" class="btn btn-default btn-lg" ng-click="addSeries()">
+		  <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span> Submit
+		</button>
+	</div>
+</center>

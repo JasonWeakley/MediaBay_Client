@@ -8,6 +8,7 @@ MediaBay.controller('NewProductController', [
 	function ($http, $scope, $location) {
 
 		$scope.product = [];
+		$scope.selectedGroup = null;
 		$scope.groupList = [];
 
 		// Get products and scope the data equal to the var "prod"
@@ -15,6 +16,7 @@ MediaBay.controller('NewProductController', [
 			.get(`http://localhost:5000/api/Product`)
 			.success(prod => $scope.product = prod);
 
+		// Get groups for dropdown in product form
 		$http({
             method: 'GET',
             url: `http://localhost:5000/api/Group`
