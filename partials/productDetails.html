@@ -1,10 +1,16 @@
-<h1>Media Bay</h1>
 <nav ng-include="'partials/nav.html'"></nav>
-<h3>Product Details for: {{ prod.Name }}</h3>
-	<ul>  
-		<li><span>Name: </span>{{ prod.Name }}</li>
-		<li><span>Description: </span>{{ prod.Description }}</li>
-		<li><span>Price: </span>{{ prod.UnitPrice }}</li>
-	</ul>
-<button ng-click="editProduct(prod.ProductId)">Edit Product</button>
-<button ng-click="deleteProduct(prod.ProductId)">Delete</button>
+<center>
+	<div style="width:50%" class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">{{ prod.Name }}</h3>
+		</div>
+		<ul class="panel-body nav">  
+			<li>${{ prod.UnitPrice }}</li>
+			<li>{{ prod.Description }}</li>
+		</ul>
+	</div>
+	<div style="width:50%">
+		<button style="width:45%" type="button" class="btn btn-default btn-lg" ng-click="editProduct(prod.ProductId)">Edit Product</button>
+		<button style="width:45%" type="button" class="btn btn-default btn-lg" ng-click="deleteProduct(prod.ProductId)">Delete</button>
+	</div>
+</center>

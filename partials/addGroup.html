@@ -1,21 +1,29 @@
-<h1>Media Bay</h1>
 <nav ng-include="'partials/nav.html'"></nav>
-<h3>Create a New Group</h3>
-<div>
-	<label for="name">Group Name</label>
-	<input type="text" name="name" ng-model="group.name">
-</div>
-<div>
-	<label for="description">Description</label>
-	<input type="text" name="description" ng-model="group.description">
-</div>
-<div>
-	<label for="price">Price</label>
-	<input type="text" name="price" ng-model="group.price">
-</div>
-<div>
-	<label for="promocode">Promo Code</label>
-	<input type="text" name="promocode" ng-model="group.promocode">
-</div>
-
-<button ng-click="addGroup()">Submit</button>
+<center>
+	<h2>Create a New Group</h2>
+	<div style="width:75%">
+		<div style="width:100%" class="input-group">
+		  <div style="width:25%" for="name" class="input-group-addon" id="basic-addon1">Group Name</div>
+		  <input name="name" ng-model="group.name" type="text" class="form-control" placeholder="Movie" aria-describedby="basic-addon1">
+		</div>
+		<br>
+		<div style="width:100%" class="input-group">
+		  <div style="width:25%" for="description" class="input-group-addon" id="basic-addon1">Description</div>
+		  <input name="description" ng-model="group.description" type="text" class="form-control" placeholder="It is a dark time for the Rebellion." aria-describedby="basic-addon1">
+		</div>
+		<br>
+		<div style="width:100%" class="input-group">
+		  <div style="width:25%" for="price" class="input-group-addon" id="basic-addon1">Price</div>
+		  <input name="price" ng-model="group.price" type="text" class="form-control" placeholder="Luca$" aria-describedby="basic-addon1">
+		</div>
+		<br>
+		<div style="width:100%" class="input-group">
+		  <div style="width:25%" for="promocode" class="input-group-addon" id="basic-addon1">Promo Code</div>
+		  <input name="promocode" ng-model="group.promocode" type="text" class="form-control" placeholder="Di$ney" aria-describedby="basic-addon1">
+		</div>
+		<br>
+		<button style="width:100%" type="button" class="btn btn-default btn-lg" ng-click="addGroup()">
+		  <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span> Submit
+		</button>
+	</div>
+</center>
